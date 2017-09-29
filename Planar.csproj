@@ -42,6 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapters\BaseAdapter.cs" />
+    <Compile Include="Classes\Config.cs" />
+    <Compile Include="Classes\Recipe.cs" />
+    <Compile Include="Classes\Script.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
