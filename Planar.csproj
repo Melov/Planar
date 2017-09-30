@@ -32,6 +32,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DotNetZip, Version=1.10.1.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetZip.1.10.1\lib\net20\DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,14 +49,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Adapters\BaseAdapter.cs" />
-    <Compile Include="Classes\Config.cs" />
-    <Compile Include="Classes\Recipe.cs" />
-    <Compile Include="Classes\Script.cs" />
+    <Compile Include="Classes\Config\Config.fields.cs" />
+    <Compile Include="Classes\Config\Config.functions.cs" />
+    <Compile Include="Classes\Config\Config.variables.cs" />
+    <Compile Include="Classes\Recipe\Recipe.fields.cs" />
+    <Compile Include="Classes\Recipe\Recipe.functions.cs" />
+    <Compile Include="Classes\Recipe\Recipe.variables.cs" />
+    <Compile Include="Classes\Recipe\Recipe.funcions-static.cs" />
+    <Compile Include="Classes\Script\Script.functions.cs" />
+    <Compile Include="Classes\Script\Script.variables.cs" />
+    <Compile Include="Enums\TargetArch.cs" />
+    <Compile Include="Enums\TargetOS.cs" />
+    <Compile Include="Enums\TargetPlatform.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <Compile Include="Classes\Script\Script.fields.cs" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

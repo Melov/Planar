@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Planar.Classes
+namespace Planar.Enums
 {
-    class Config
+    public enum TargetPlatform
     {
+        WINDOWS,
+        LINUX,
+        OSX,
+        UNKNOWN=255
     }
 }
